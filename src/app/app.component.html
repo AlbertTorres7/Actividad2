@@ -1,0 +1,136 @@
+<app-titulo></app-titulo>
+<p>Angular es un framework destinado al desarrollo web, en este tutorial se profundizará en los siguientes puntos:</p>
+<app-indice></app-indice>
+<h2>Sobre Angular</h2>
+<p>Angular es un framework de desarrollo web, permite crear interfaces de usuario dinámica, facilitando la interacción del usuario con la aplicación sin necesidad de recargar la página. 
+Angular dispone de herramientas para gestionar el estado de la aplicación, la manipulación del DOM y la comunicación con servicios backend.</p>
+<p>Angular se utiliza en una amplia variedad de aplicaciones, tales como:</p>
+
+<ul>
+  <li>Aplicaciones web empresariales</li>
+  <li>Aplicaciones web empresariales</li>
+  <li>Aplicaciones móviles híbridas</li>
+  <li>Aplicaciones de comercio electrónico.</li>
+  <li>Aplicaciones de gestión de contenido</li>
+  <li>Proyectos que requieren una experiencia de usuario interactiva y fluida</li>
+</ul>
+
+<p>Angular se basa principalmente en TypeScript, que es un superconjunto de JavaScript. TypeScript añade tipado estático y otras características que facilitan el desarrollo a gran escala. Además, Angular utiliza HTML para la estructura de las vistas y CSS para el estilo de las aplicaciones.</p>
+<p>Para poder hacer uso del framework es necesario disponer de:</p>
+
+<ol>
+  <li> Node.js v18.19.1 o superior</li>
+  <li> Editor de texto (Se recomienda Visual Studio Code)</li>
+  <li> Un terminal (necesario para correr los comandos CLI de Angular)</li>
+</ol> 
+
+<h2>Instalación</h2>
+<p>Es necesario instalar Angular en nuestro PC, pero antes de nada vamos a asegurarnos que la versión que hemos instalado es adecuada, 
+para ello ejecutamos el siguiente comando desde la terminal:</p>
+<p class="comando"> node -v </p>
+<p>Una vez que hemos asegurado que la versión de node.js está en regla empezamos con la instalación:</p>
+<ol>
+  <li>Dentro del terminal <strong>ejecutar </strong>el siguiente comando para instalar Angular:</li>
+  <p class="comando"> npm install -g &#64;angular/cli </p>
+  <li><strong>Crear</strong> un nuevo proyecto:</li>
+  <p>El segundo paso es crear un proyecto, podriamos decir que es lienzo en blanco donde vamos a diseñar nuestra web. Para ello ejecutamos el siguiente comando:</p>
+  <p class="comando"> ng new --nombre del proyecto-- </p>
+  <p>Justo después de ejecutarlo se mostrarán varias opciones de configuración necesarias para la instalación, para este tutorial se han seleccionado las opciones por defecto.</p>
+  <p>Si la instalación ha ido según lo esperado recibiremos un mensaje como este:</p>
+  <p class="comando"> ✔ Packages installed successfully.
+    Successfully initialized git. </p>
+  <li><strong>Arrancar</strong> el proyecto</li>
+  <p>Nos dirigiremos a ruta donde se encuentre el proyecto que ha sido creado:</p>
+  <p class="comando">cd --nombre del proyecto--</p>
+  <p>Para finalizar arrancamos nuestro proyecto:</p>
+  <p class="comando">ng serve</p>
+  <p>Si todo ha ido bien, deberías ver un mensaje similar en tu terminal:</p>
+  <p class="comando">Watch mode enabled. Watching for file changes...
+    NOTE: Raw file sizes do not reflect development server per-request transformations.
+     ➜ Local: http://localhost:4200/
+     ➜ press h + enter to show help</p>
+     <p>Si accedes a  http://localhost:4200/ verás algo como esto:</p>
+     <img class="imagen" src="hello.PNG"/>
+</ol> 
+
+<h2>Primeros Pasos</h2>
+<p>Con nuestro proyecto levantado podemos empezar con el código de nuestra web, para ello vamos a ayudarnos del editor de texto Visual Studio Code:</p>
+<p class="comando">code --ruta del proyecto--</p>
+<p>Una vez abierto podemos ver que se despliega un gran número de ficheros, antes de ponernos manos a la obra vamos echar un ojo.</p>
+<img class="img-ind" src="ind.PNG"/>
+<p>La captura que se muestra continuación son los ficheros que nos permitirán trabajar con la web:</p>
+<img class="img-indx" src="index.PNG"/>
+<ul>
+  <li><strong>index.html</strong>: es el archivo donde escribiremos nuestro código HTML y donde incluiremos los "tags" de los diferentes componentes.</li>
+  <li><strong>main.ts</strong>: fichero donde importaremos los componentes</li>
+  <li><strong>styles.css</strong>: fichero donde vamos a definir los estilos de nuestra web</li>
+</ul> 
+<p>Otro conjunto de fichero son lo que conforman "app". App es un componente, pero... <strong>¡¿QUE ES UN COMPONENTE?!</strong></p>
+<img class="img-indx" src="app.PNG"/>
+<p>En Angular, un componente es una combinación de una plantilla HTML, estilos CSS y lógica TypeScript. 
+  Representa una parte de la interfaz de usuario y puede tener su propio comportamiento y datos, pudiendo añadir esa plantilla en cualquier momento y lugar dentro de nuestro index.html.</p>
+<p>Sabiendo todo esto vamos a realizar nuestro primer <strong>"Hola mundo"</strong>, uno <strong>básico</strong> y otro usando <strong>componentes</strong>:</p>
+<ul>
+  <li><strong>"Hola mundo" básico</strong></li><br>
+  <ol>
+    <li>Si no esta arrancado el proyecto debemos hacerlo con el comando previamente mencionado (ng serve) y acceder a la ruta.</li>
+    <li>Abrimos el fichero app.component.html y borramos todo el código ya que solo queremos que en nuestra web solamente el mensaje "Hola mundo".</li>
+    <li>En el fichero app.component.html introducimos nuestro texto:</li>
+    <p class="comando"> &#60;h1&#62;Hola mundo&#60;h1&#47;&#62;</p>
+    <li>Si guardamos los cambios y actualizamos la web podremos ver algo como esto:</li>
+    <p></p>
+    <img class="img-indx" src="hola-mundo.PNG"/>
+  </ol>
+  <br> <li><strong>"Hola mundo" usando componentes</strong></li>
+  <p>Angular es un framework muy usado, uno de los principales motivos son los componentes, estos no permiten crear plantillas y agregarlas a nuestro index.html siempre que queramos.</p>
+  <p>A continuación vamos a realizar nuestro "Hola mundo" mediante un componente:</p>
+      <p>Creamos el nuevo componente:</p>
+      <p class="comando">ng generate componente hola-mundo</p>
+      <p>En el fichero hola-mundo.component.html introducimos el texto:</p>
+      <p class="comando"> &#60;h1&#62;Hola mundo&#60;h1&#47;&#62;</p>
+      <p>Antes de seguir vamos a entender que contiene el fichero hola-mundo.component.ts ya que nos va a hacer falta justo a continuación:</p>
+      <img class="img-indx" src="compo.PNG"/>
+      <p>La imagen nos muestra los campos que conforman al componente:</p>
+      <ul>
+        <li><strong>selector</strong>: es el nombre identificador del componente para incluirlo en un html.</li>
+        <li><strong>imports</strong>: es donde podemos importar otros componentes que necesitemos.</li>
+        <li><strong>templateUrl</strong>: indica la ruta del código html.</li>
+        <li><strong>styleUrl</strong>: indica la ruta del fichero de css que permite configurar el estilo del html.</li>
+        <li><strong>export class HolaMundoComponent</strong>: nos dice que el nombre para importar este componente es "HolaMundoComponent"</li>
+      </ul>
+      <p>Sabiendo esto debemos importar el componente en app.component.ts:</p>
+      <img class="img-indx" src="comapp.PNG"/>
+      <p>Añadimos el tag dentro del fichero app.component.html:</p>
+      <p class="comando"> &#60;app-hola-mundo&#62;&#60;app-hola-mundo&#47;&#62;</p>
+      <p>Si refrescamos nuestra web veremos el esperano mensaje:</p>
+      <img class="img-indx" src="small-hola.PNG"/>
+</ul>
+
+<h2>Nuestra primera web con Angular</h2>
+<p>Con todo lo aprendido a lo largo del tutorial podremos ser capaces de crear una sencilla web con Angular. A continuación, enseñaremos los pasos que se han ido realizando para diseñar esta web.</p>
+<p>Lo primero ha sido modificar la cabecera y el icono de la web:</p>
+<img class="img-indx" src="img1.PNG"/><br>
+<img class="img-indx" src="img2.PNG"/>
+<p>Para darle el color de fondo se ha añadido el siguiente código en el style.css</p>
+<img class="img-indx" src="img3.PNG"/>
+<p>El siguiente paso es crear un título, para ello se ha creado el componente "titulo", su html es:</p>
+<img class="img-indx" src="img4.PNG"/>
+<p>Es importante mencionar que el componente "app" lo hemos usado de componente padre, por lo que todos los componentes que se han añadido después se han importado a app.component.ts:</p>
+<img class="img-indx" src="img5.PNG"/><br>
+<img class="img-indx" src="img6.PNG"/>
+<p>Con Angular puedes crear tus propios componentes como hemos visto con hola-mundo, 
+  pero también podemos integrar componentes ya creados de páginas web como <a href="https://material.angular.io/">Material</a>.</p>
+<p>Simplemente busca lo que necesites y la propia página te va indicando los pasos y código necesario para implementarlo, 
+  para esta web hemos utilizado el componente llamado <a href="https://material.angular.io/components/tree/overview">"Flat tree"</a> como índice de la web , 
+  es bastante sencillo, unicamente recordar que debemos importarlo en app.components.ts ya que si no es así al no reconocer el componente dará un error :(</p>
+  <img class="img-indx" src="img8.PNG"/><br>
+  <img class="img-indx" src="img7.PNG"/><br>
+  <img class="img-indx" src="img9.PNG"/><br>
+  <img class="img-indx" src="img10.PNG"/>
+<p>Para finalizar quedaría añadir el texto y las imágenes que deseemos, todo ello dentro de nuestro fichero app.component.html</p>
+
+<h2>Conclusiones</h2>
+<p>En este tutorial hemos podido aprender las funcionalidades y nociones básicas de Angular, los tipos de fichero, archivos que la componen, su instalación y el uso de componentes,
+  siendo capaces de crear nuestra primera página web. Espero y deseo que haya sido un tutorial didáctico y entretenido, 
+  para cualquier duda o cuestion podeís ayudaros de la web oficial de <a href="https://angular.dev/">Angular</a></p>
+

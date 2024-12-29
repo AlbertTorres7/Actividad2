@@ -1,0 +1,19 @@
+p{font-family: inherit;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+h2{font-family: inherit;
+    margin-left: 15px;}
+
+.comando{
+    background-color: lightgrey;
+    margin-right: 1500px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:15px;
+    font-style:inherit;}
+.img-ind{margin-left: 15px;
+    width: 180px; height: 300px;}
+.img-indx{margin-left: 15px;}
